@@ -1,0 +1,318 @@
+.productItem{
+    position: relative;
+    min-width: 320px;
+    min-height: 509px;
+    margin: 30px 40px;
+    display: flex;
+    flex-direction: column;
+
+  }
+  @media(max-width:480px){
+        .productItem{
+            margin: 30px 0px;
+            /* min-width: 80%; */
+        }
+        .productCard{
+            /* min-width: 80%; */
+        }
+  }
+.productItem_ended{
+    position: absolute;
+    min-width: 320px;
+    min-height: 480px;
+    z-index: 5;
+    display: block;
+    /* visibility: hidden; */
+    border-radius: 12px;
+    background-color: rgba(197, 195, 195, 0);
+    cursor: pointer;
+}
+
+.productItem_ended._ended{
+    background-color: rgba(197, 195, 195, 0.6);
+    cursor: default;
+    /* visibility: visible; */
+}
+.productCard{
+    position: relative;
+    min-width: 320px;
+    min-height: 480px;
+    overflow: hidden;
+    background: #F2F2F2;
+    display: flex;
+    z-index: 4;
+    flex-direction: column;
+    color: #000;
+    border: 4px solid #1698D9;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.productCard:hover{
+    border: 4px solid #2EA8E6;
+}
+
+.productCard._selected{
+    border: 4px solid #D91667;
+}
+
+.productItem_ended:hover~.productCard._selected._hovBlock{
+    border: 4px solid #D91667;
+}
+
+.productItem_ended:hover~.productCard._selected{
+    border: 4px solid #E52E7A;
+}
+
+.productCard._ended{
+    border: 4px solid #B3B3B3;
+    cursor: default;
+}
+.corner._ended{
+    border-right: 4px solid #B3B3B3
+}
+.corner{
+    position: absolute;
+    /* width: 124.45px; */
+    width: 60px;
+    height: 60px;
+    transform: 50% 50% 0;
+    transform: rotate(45deg);
+    left: -8.49%;
+    right: 85.8%;
+    top: -5.35%;
+    bottom: 88.32%;
+
+    z-index: 10;
+    overflow: hidden;
+    border-right: 4px solid #1698D9;
+    
+    background-image:  url(../../imeg/Pattern.png);
+}
+
+.corner::before{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: 1;
+   
+    background-image:  url(../../imeg/Pattern.png);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}  
+
+.productItem_ended:hover~.corner{
+    border-right: 4px solid #2EA8E6;
+}
+
+.productItem_ended:hover~.corner._ended{
+    border-right: 4px solid #B3B3B3
+}
+
+.corner._selected{
+    border-right: 4px solid #D91667;
+}
+
+.productItem_ended:hover~.corner._selected._hovBlock{
+    border-right: 4px solid #D91667;
+}
+
+
+.productItem_ended:hover~.corner._selected{
+    border-right: 4px solid #E52E7A;
+    
+}
+
+
+  
+.title{
+    position: absolute;
+    top: 21px;
+    left: 51px;
+    font-family: 'Trebuchet MS';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #666666;
+}
+.nameProduct{
+    position: absolute;
+    top: 45px;
+    left: 51px;
+    font-family: 'Trebuchet MS';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+
+    color: #000000;
+}
+
+.flavor{
+    position: absolute;
+    top: 100px;
+    left: 51px;
+    font-family: 'Trebuchet MS';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+}
+
+.description{
+    position: absolute;
+    top: 143px;
+    left: 51px;
+    min-width: 106px;
+    min-height: 32px;
+}
+
+.description__text{
+    display: block;
+    font-family: 'Trebuchet MS';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+    color: #666666;
+}
+
+.weight{
+    position: relative;
+    top: 384px;
+    left: 224px;
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    z-index: 10;
+    background-color: #1698D9;
+}
+
+.productItem_ended:hover~.productCard .weight{
+    background-color: #2EA8E6;
+}
+
+.weight._selected{
+    background-color: #D91667;
+}
+
+.productItem_ended:hover~.productCard._selected .weight._selected._hovBlock{
+    background-color: #D91667;
+}
+
+.productItem_ended:hover~.productCard._selected .weight._selected{
+    background-color: #E52E7A;
+}
+
+.weight._ended{
+    background-color: #B3B3B3;
+}
+
+.productItem_ended:hover~.productCard .weight._ended{
+    background-color: #B3B3B3;
+}
+
+
+.weight__numb{
+    /* position: absolute;
+    height: 22px;
+    top: calc(50%-22px/2); */
+    height: 52%;
+    font-family: 'Trebuchet MS';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 22px;
+ 
+    background: none;
+    
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #FFFFFF;
+}
+
+.weight__text{
+    display: flex;
+    font-family: 'Trebuchet MS';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+    background: none;
+    /* or 52% */
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    color: #FFFFFF;
+}
+
+.product__image{
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+}
+
+.specification{
+    position: relative;
+    width: 100%;
+    height: 29px;
+    font-family: 'Trebuchet MS';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+
+
+.specification .point{
+    color: #1698D9;
+}
+
+.specification a{
+    color: #1698D9;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #1698D9 50%, transparent 50%);
+    background-position: 0 1.04em;
+    background-repeat: repeat-x;
+    background-size: 4px 2px;
+    /* border-bottom: 1px #1698D9 dashed; */
+    
+}
+
+.specification .link{
+    color: #1698D9;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #1698D9 50%, transparent 50%);
+    background-position: 0 1.04em;
+    background-repeat: repeat-x;
+    background-size: 4px 2px;
+    /* border-bottom: 1px #1698D9 dashed; */
+    cursor: pointer;
+}
+
+.specification._ended{
+    color: #FFFF66;
+}
+
